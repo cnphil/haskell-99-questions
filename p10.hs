@@ -6,4 +6,4 @@ pack = foldr fun []
                                         ([x]:acc))
 
 encode :: (Integral a) => (Eq b) => [b] -> [(a, b)]
-encode = (map (\ys -> (fromIntegral . length $ ys, head ys))) . pack
+encode = map (\ys -> (fromIntegral . length $ ys, head ys)) . pack
